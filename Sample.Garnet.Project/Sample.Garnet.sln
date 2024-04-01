@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Garnet.Server", "Sample.Garnet.Server\Sample.Garnet.Server.csproj", "{FA4BB216-AC92-449D-AF06-D1AD3BE085DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Garnet.Client", "Sample.Garnet.Client\Sample.Garnet.Client.csproj", "{B66AB3D5-D9F3-49E5-8FCE-AACAC3E9131E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Garnet.Client.Redis", "Sample.Garnet.Client.Redis\Sample.Garnet.Client.Redis.csproj", "{FBCE713D-290B-45D1-A5B1-5375B9EC1814}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Garnet.Client.Redis.Subscriber", "Sample.Garnet.Client.Redis.Subscriber\Sample.Garnet.Client.Redis.Subscriber.csproj", "{A8CB8464-FF36-43ED-8843-77D8831953AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA4BB216-AC92-449D-AF06-D1AD3BE085DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA4BB216-AC92-449D-AF06-D1AD3BE085DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA4BB216-AC92-449D-AF06-D1AD3BE085DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA4BB216-AC92-449D-AF06-D1AD3BE085DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B66AB3D5-D9F3-49E5-8FCE-AACAC3E9131E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B66AB3D5-D9F3-49E5-8FCE-AACAC3E9131E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B66AB3D5-D9F3-49E5-8FCE-AACAC3E9131E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B66AB3D5-D9F3-49E5-8FCE-AACAC3E9131E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBCE713D-290B-45D1-A5B1-5375B9EC1814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBCE713D-290B-45D1-A5B1-5375B9EC1814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBCE713D-290B-45D1-A5B1-5375B9EC1814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBCE713D-290B-45D1-A5B1-5375B9EC1814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8CB8464-FF36-43ED-8843-77D8831953AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8CB8464-FF36-43ED-8843-77D8831953AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8CB8464-FF36-43ED-8843-77D8831953AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8CB8464-FF36-43ED-8843-77D8831953AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

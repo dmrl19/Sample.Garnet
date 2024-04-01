@@ -1,0 +1,56 @@
+version: '3.9'
+
+services:
+    garnet-server-sample:
+        build:
+          context: .
+          dockerfile: ./Sample.Garnet.Server/Dockerfile 
+        image: dmm91/garnet-server-sample
+        environment:
+          - SETUP_GARNET_SERVER_WITH_CLI_ARGS=true # true or false
+        ports:
+          - "6379:6379"
+        networks: 
+          - custom-network
+    garnet-client-sample:
+        build:
+          context: .
+          dockerfile: ./Sample.Garnet.Client/Dockerfile 
+        image: dmm91/garnet-client-sample
+        environment:
+          - SERVER_GARNET_HOST=garnet-server-sample
+          - SERVER_GARNET_HOST_PORT=6379
+        networks: 
+          - custom-network
+        depends_on:
+          - garnet-server-sample
+    garnet-client-redis-sample:
+        build:
+          context: .
+          dockerfile: ./Sample.Garnet.Client.Redis/Dockerfile 
+        image: dmm91/garnet-client-redis-sample
+        environment:
+          - SERVER_GARNET_HOST=garnet-server-sample
+          - SERVER_GARNET_HOST_PORT=6379
+        networks: 
+          - custom-network
+        depends_on:
+          - garnet-client-sample
+    garnet-client-redis-subscriber-sample:
+        build:
+          context: .
+          dockerfile: ./Sample.Garnet.Client.Redis.subscriber/Dockerfile 
+        image: dmm91/garnet-client-redis-subscriber-sample
+        environment:
+          - SERVER_GARNET_HOST=garnet-server-sample
+          - SERVER_GARNET_HOST_PORT=6379
+        networks: 
+          - custom-network
+        depends_on:
+          - garnet-client-redis-sample
+
+networks:
+  custom-network:
+
+  # docker-compose -f docker-compose.yaml up -d
+  # docker-compose -f docker-compose.yaml down
